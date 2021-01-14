@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../logo.png';
 import { useGlobalContext } from '../context';
 import { FaTimes } from 'react-icons/fa';
+import { social, links } from '../data';
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
@@ -15,27 +16,28 @@ const Sidebar = () => {
         </button>
       </div>
       <ul className='links'>
-            <li>
-              Link 1
+        {links.map((link) => {
+          const { id, url, text, icon } = link;
+          return (
+            <li key={id}>
+              <a href={url}>
+                {icon}
+                {text}
+              </a>
             </li>
-            <li>
-              Link 2
-            </li>
-            <li>
-              Link 3
-            </li>
+          );
+        })}
       </ul>
       <ul className='social-icons'>
-            <li>
-              LinkedIn
+        {social.map((link) => {
+          const { id, url, icon } = link;
+          return (
+            <li key={id}>
+              <a href={url}>{icon}</a>
             </li>
-            <li>
-              Github
-            </li>
-            <li>
-              Resume
-            </li>
-            </ul>
+          );
+        })}
+      </ul>
     </aside>
   );
 };
