@@ -1,13 +1,15 @@
 import React from 'react';
+import { FaBars } from 'react-icons/fa';
+import { useGlobalContext } from '../context';
 
 const Home = () => {
-  
+  const { openSidebar } = useGlobalContext();
   return (
     <main>
-      <h2>Hello World</h2>
-      <button className='sidebar-toggle'>
-        Toggle
+      <button onClick={openSidebar} className='sidebar-toggle'>
+        <FaBars />
       </button>
+      <h2>Developer  |  Educator  |  Activist</h2>
     </main>
   );
 };

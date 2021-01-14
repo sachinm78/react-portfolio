@@ -1,20 +1,32 @@
-import React, { useState, useContext, useEffect } from 'react'
-import { useCallback } from 'react'
+import React, { useState, useContext } from 'react';
 
-const url = '#'
-const AppContext = React.createContext()
+const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   
+  const openSidebar = () => {
+    setIsSidebarOpen(true);
+  };
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
+
   return (
-    <AppContext.Provider>
+    <AppContext.Provider
+      value={{
+        isSidebarOpen,
+        openSidebar,
+        closeSidebar,
+      }}
+    >
       {children}
     </AppContext.Provider>
-  )
-}
+  );
+};
 
 export const useGlobalContext = () => {
-  return useContext(AppContext)
-}
+  return useContext(AppContext);
+};
 
-export { AppContext, AppProvider }
+export { AppContext, AppProvider };

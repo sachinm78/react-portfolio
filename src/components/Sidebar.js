@@ -1,12 +1,17 @@
 import React from 'react';
+import logo from '../logo.png';
+import { useGlobalContext } from '../context';
+import { FaTimes } from 'react-icons/fa';
 
 const Sidebar = () => {
-  
+  const { isSidebarOpen, closeSidebar } = useGlobalContext();
+
   return (
-    <main>
-        <div className='sidebar-header'>
-        <button className='close-btn'>
-          Close
+    <aside className={`${isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar'}`}>
+      <div className='sidebar-header'>
+        <img src={logo} className='logo' alt='sachinm78' />
+        <button className='close-btn' onClick={closeSidebar}>
+          <FaTimes />
         </button>
       </div>
       <ul className='links'>
@@ -30,9 +35,8 @@ const Sidebar = () => {
             <li>
               Resume
             </li>
-      </ul>
-    </main>
-      
+            </ul>
+    </aside>
   );
 };
 
