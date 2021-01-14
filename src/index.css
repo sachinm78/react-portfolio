@@ -112,10 +112,20 @@ main {
   justify-content: center;
   align-items: center;
 }
+.logo-home {
+  position: absolute;
+  text-align: center;
+  top: 2rem;
+  left: 3rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-3);
+}
 .sidebar-toggle {
   position: fixed;
   top: 2rem;
-  left: 3rem;
+  right: 3rem;
   font-size: 2rem;
   background: transparent;
   border-color: transparent;
