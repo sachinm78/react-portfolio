@@ -41,6 +41,7 @@ Variables
   --radius: 0.25rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --smallWidth: 85vw;
   --max-width: 1170px;
   --fixed-width: 620px;
 }
@@ -238,4 +239,20 @@ Sidebar
 }
 .show-sidebar {
   transform: translate(0);
+}
+
+/* 
+====== 
+About
+======
+*/
+.about-section {
+  width: var(--smallWidth);
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+}
+.about-section p {
+  line-height: 2rem;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
