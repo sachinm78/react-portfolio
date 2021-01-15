@@ -7,11 +7,11 @@ const Home = () => {
   const { openSidebar } = useGlobalContext();
   return (
     <main>
-      <img src={logo} className='logo-home' alt='sachinm78' />
-      <button onClick={openSidebar} className='sidebar-toggle'>
+      {/* <img src={logo} className='logo-home' alt='sachinm78' /> */}
+      {/* <button onClick={openSidebar} className='sidebar-toggle'>
         <FaBars />
-      </button>
-      <h2>Developer  |  Educator  |  Activist</h2>
+      </button> */}
+      <h2 className='h2-large'>Developer  |  Educator  |  Activist</h2>
     </main>
   );
 };
