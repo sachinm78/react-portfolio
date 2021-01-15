@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaBars } from 'react-icons/fa';
 import { useGlobalContext } from '../context';
-import logo from '../logo.png';
+import logo from '../logo-grey.jpg';
 
 const Home = () => {
   const { openSidebar } = useGlobalContext();
