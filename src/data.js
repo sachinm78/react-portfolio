@@ -14,13 +14,13 @@ export const links = [
     icon: <FaHome />,
   },
   {
-    id: 2,
+    id: 1,
     url: '/projects',
     text: 'projects',
     icon: <FaFolderOpen />,
   },
   {
-    id: 3,
+    id: 2,
     url: '/about',
     text: 'about',
     icon: <FaWpforms />,
